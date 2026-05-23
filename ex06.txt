@@ -1,0 +1,16 @@
+#include <stdio.h>
+int fatorial(int n){
+  int resultado=1;
+  for(int i=2;i<=n;i++){
+    resultado*=i;
+  }
+  return resultado;
+}
+int main(){
+  int a;
+  printf("Digite um número:");
+  scanf("%d",&a);
+  int resultado=fatorial(a);
+  printf("Fatorial:%d",resultado);
+  return 0;
+}

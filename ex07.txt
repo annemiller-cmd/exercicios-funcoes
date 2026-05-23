@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int palindromo(char*s){
+  int ini=0, fim=strlen(s)-1;
+  while(ini<fim){
+    if(s[ini]!=s[fim]){
+      return 0;
+    }
+    ini++;
+    fim--;
+  }
+  return 1;
+}
+int main(){
+  char palavra[50];
+  printf("Digite uma palavra:");
+  scanf("%s",palavra);
+  int r=palindromo(palavra);
+  if(r==1){
+    printf("%s é palindromo",palavra);
+  }else{
+    printf("%s não é palindromo",palavra);
+  }
+  return 0;
+}

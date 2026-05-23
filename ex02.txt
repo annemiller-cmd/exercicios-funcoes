@@ -1,0 +1,19 @@
+#include <stdio.h>
+int divisao(int a, int b){
+  int resultado=0;
+  while(a>=b){
+   a-=b;
+   resultado++;
+  }
+  return resultado;
+}
+int main(){
+  int n1,n2;
+  printf("Digite um número:");
+  scanf("%d"",&n1);
+  printf("Digite um número:");
+  scanf("%d",&n2);
+  int resultado=divisao(n1,n2);
+  printf("Divisao:%d",resultado);
+  return 0; 
+}
