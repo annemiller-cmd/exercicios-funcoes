@@ -1,0 +1,16 @@
+#include <stdio.h>
+int soma(int x){
+  return x*(x+1)/2;
+}
+int main(){
+  int n;
+  printf("Digite um número:");
+  scanf("%d",&n);
+  while(n<0){
+    printf("Valor inválido, digite novamente");
+    scanf("%d",&n);
+  }
+  int r=soma(n);
+  printf("Soma:%d",r);
+  return 0;
+}
