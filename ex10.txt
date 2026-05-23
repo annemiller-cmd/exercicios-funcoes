@@ -1,0 +1,36 @@
+#include <stdio.h>
+int primo(int n){
+  if(n<2){
+  return 0;
+  }
+  for(int i=2;i*i<=n;i++){
+    if(n%i==0){
+      return 0;
+    }
+  }
+  return 1;
+}
+int primos_entre(int x,int y){
+  int cont=0;
+  for(int i=x;i<=y;i++){
+    if(primo(i)){
+      cont++;
+    }
+  }
+  return cont;
+}
+int main(){
+  int a,b;
+  printf("Digite um número:");
+  scanf("%d",&a);
+  printf("Digite um número:");
+  scanf("%d",&b);
+  while(b<a){
+    printf("Valor inválido, digite novamente:");
+    scanf("%d",b);
+  }
+  int cont=primos_entre(a,b);
+  printf("Quantidade de primos entre %d e %d=%d",a,b,cont);
+  return 0;
+  }
+   
