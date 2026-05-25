@@ -1,0 +1,21 @@
+#include <stdio.h>
+int fatorial(int x){
+  int resultado=1;
+  for(int i=2;i<=x;i++){
+    resultado*=i;
+  }
+  return resultado;
+}
+int combinacoes( int n,int r){
+  return fatorial(n)/fatorial(r)*(n-r);
+}
+int main(){
+  int a,b;
+  printf("Digite um número:");
+  scanf("%d",&a);
+  printf("Digite um número:");
+  scanf("%d",&b);
+  int r=combinacoes(a,b);
+  printf("Combinção=%d",r);
+  return 0;
+}
