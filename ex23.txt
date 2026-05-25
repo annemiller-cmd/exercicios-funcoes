@@ -1,0 +1,17 @@
+#include <stdio.h>
+void resto5(int x, int y){
+  for(int i=x;i<=y;i++){
+    if(i%13==5){
+      printf("%d\n",i);
+    }
+  }
+}
+int main(){
+  int a,b;
+  printf("Digite um número:");
+  scanf("%d",&a);
+  printf("Digite um número:");
+  scanf("%d",&b);
+  resto5(a,b);
+  return 0;
+}
