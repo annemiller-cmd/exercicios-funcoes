@@ -1,0 +1,12 @@
+#include <stdio.h>
+void fahrenheit(){
+  printf("F\t C\n");
+  for(int f=50;f<=150;f++){
+    float c=5.0*(f-32)/9;
+    printf("%d\t%.2f\n",f,c);
+  }
+}
+int main(){
+  fahrenheit();
+  return 0;
+}
