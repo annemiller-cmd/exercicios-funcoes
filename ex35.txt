@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <string.h>
+int meu_strlen(char *s){
+  int i=0;
+  while(s[i]!='\0'){
+    i++;
+  }
+  return i;
+}
+int meu_strcmp(char *a, char *b){
+  int i=0;
+  while(a[i]!='\0' && a[i]==b[i]){
+    i++;
+  }
+  return a[i]-b[i];
+}
+void meu_strncpy(char *dest, char *src, int n){
+  int i;
+  for(i=0;i<n && src[i]!='\0';i++){
+      dest[i]=src[i];
+  }
+  dest[i]='\0';
+}
+void meu_strcat(char *dest, char *src){
+   int i=meu_strlen(dest), j=0;
+  while(src[j]!='\0'){
+    dest[i]=src[j];
+    i++; j++;
+  }
+  dest[i]='\0';
+}
+void meu_strfind(char *texto, char *busca){
+  int tam=meu_strlen(busca);
+  for(int i=0;texto[i]!='\0';i++){
+    int achou=1;
+       for(int j=0;j<tam;j++){
+           if(texto[i+j]!=busca[j]){
+              achou=0;
+              break;
+        }
+       }
+        if(achou){
+        printf("Posição %d\n",i);
+        }
+   }
+}
+
+int main(){
+   char a[50], b[50], dest[100];
+   printf("Digite string 1:");
+   scanf("%s",a);
+   printf("Digite string 2:");
+   scanf("%s",b);
+   printf("Tamanho: %d\n", meu_strlen(a));
+   printf("Iguais? %d\n", meu_strcmp(a,b));
+   meu_strncpy(dest,a,3);
+   printf("Primeiros 3 chars: %s\n",dest);
+   meu_strcat(a,b);
+   printf("Concatenado: %s\n",a);
+   meu_strfind(a,b);
+   return 0;
+}
