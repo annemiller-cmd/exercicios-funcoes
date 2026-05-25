@@ -1,0 +1,16 @@
+#include <stdio.h>
+int raiz_teto(int x){
+  int i=1;
+  while(i*i<=x){
+  i++;
+  }
+  return i;
+}
+int main(){
+  int n;
+  printf("Digite um número:");
+  scanf("%d",&n);
+  int i=raiz_teto(n);
+  printf("%d",i);
+  return 0;
+}
